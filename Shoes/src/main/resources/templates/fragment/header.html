@@ -1,0 +1,53 @@
+<th:block th:fragment="header">
+    <header class="header">
+        <div class="header-middle">
+            <div class="container">
+                <div class="header-left col-lg-2 w-auto pl-0">
+                    <button class="mobile-menu-toggler text-primary mr-2" type="button">
+                        <i class="icon-menu"></i>
+                    </button>
+                    <a href="/" class="logo">
+                        <img th:src="@{https://printgo.vn/uploads/media/772948/thiet-ke-logo-shop-giay-16_1584094948.jpg}"  alt="logo">
+                    </a>
+                </div><!-- End .header-left -->
+
+                <div class="header-right w-lg-max">
+                    <div class="header-icon header-icon header-search header-search-inline header-search-category w-lg-max text-right">
+                        <a href="#" class="search-toggle search-button" role="button"><i class="icon-search-3"></i></a>
+                            <div class="header-search-wrapper">
+                                <input class="form-control search-input"  placeholder="Nhập sản phẩm cần tìm kiếm..." required>
+                                <button class="btn icon-search-3 p-0 search-button" type="submit"></button>
+                            </div><!-- End .header-search-wrapper -->
+                    </div><!-- End .header-search -->
+
+                    <div class="header-contact d-none d-lg-flex pl-4 ml-3 mr-xl-5 pr-4">
+                        <img alt="phone" th:src="@{/shop/images/phone.png}" width="30" height="30" class="pb-1">
+                        <h6>Hotline<a href="tel:#" class="text-dark font1">0355540066</a></h6>
+                    </div>
+
+                    <a href="" data-toggle="modal" data-target="#exampleModal" class="header-icon account-setting"><i class="icon-user-2"></i></a>
+
+                </div><!-- End .header-right -->
+            </div><!-- End .container -->
+        </div><!-- End .header-middle -->
+
+        <div class="header-bottom sticky-header d-none d-lg-block">
+            <div class="container">
+                <nav class="main-nav w-100">
+                    <ul class="menu">
+                        <li class="active">
+                            <a href="/">Trang chủ</a>
+                        </li>
+<!--                        <th:block th:each="brand : ${brands}">-->
+<!--                            <li><a href="/" th:text="${brand.name}">Trang chủ</a></li>-->
+<!--                        </th:block>-->
+                        <li class="float-right mr-0"><a href="/lien-he" class="px-4">Liên hệ</a></li>
+                        <li class="float-right"><a href="/doi-hang">Chính sách</span></a></li>
+                        <li class="float-right"><a href="/tin-tuc">Tin tức</a></li>
+                        <li class="float-right"><a href="/san-pham">Sản phẩm</a></li>
+                    </ul>
+                </nav>
+            </div><!-- End .container -->
+        </div><!-- End .header-bottom -->
+    </header><!-- End .header -->
+</th:block>
