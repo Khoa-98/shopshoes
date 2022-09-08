@@ -201,6 +201,7 @@ public class HomeController {
         return "shop/product";
     }
 
+    // api lọc sản phẩm theo brand , size, price, category
     @PostMapping("/api/san-pham/loc")
     public ResponseEntity<?> filterProduct(@RequestBody FilterProductRequest req) {
         // Validate
@@ -218,11 +219,11 @@ public class HomeController {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Mức giá phải lớn hơn 0");
             }
         }
-
         PageableDTO result = productService.filterProduct(req);
 
         return ResponseEntity.ok(result);
     }
+
 
     @GetMapping("/api/tim-kiem")
     public String searchProduct(Model model, @RequestParam(required = false) String keyword,
